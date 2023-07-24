@@ -3,7 +3,7 @@ resource "aws_vpc" "default" {
     enable_dns_hostnames = true
     tags = {
         Name = "${var.vpc_name}"
-	Owner = "shiva.pinisetti"
+	Owner = "shiva.pinisettiii"
     fav_cricketer = "${var.fav_cricketer}"
     fav_Batsman = "${var.fav_Batsman}"
 	environment = "${var.environment}"
@@ -16,3 +16,4 @@ resource "aws_internet_gateway" "default" {
         Name = "${var.IGW_name}"
     }
 }
+

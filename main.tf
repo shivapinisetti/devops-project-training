@@ -18,14 +18,32 @@ terraform {
 
 terraform {
   backend "s3" {
-    bucket = "shiva.terraform"
+    bucket = "terraformstate.file"
     key    = "myterraform.tfstate"
     region = "us-east-1"
-    dynamodb_table = "terraform-up-and-running-locks"
-    encrypt        = true
   }
 }
 
+
+
+resource "aws_s3_bucket" "bucket1" {
+  bucket = "my-terraform.tfstatebucket1"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
+
+
+resource "aws_s3_bucket" "bucket2" {
+  bucket = "my-terraform.tfstatebucket2"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
 
 
 
