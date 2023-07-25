@@ -15,6 +15,15 @@ terraform {
 }
 }
 
+terraform {
+  backend "s3" {
+    bucket = "shivaterraformbucket"
+    key    = "myterraform.tfstate"
+    region = "us-east-1"
+    dynamodb_table = "terraformstate.file"
+    encrypt        = true
+  }
+}
 
 
 
